@@ -6,6 +6,7 @@
 
 package kwic;
 
+import java.io.FileNotFoundException;
 import static java.lang.System.*;
 
 /**
@@ -14,10 +15,6 @@ import static java.lang.System.*;
  */
 public class Main 
 {
-    public Main(String filename)
-    {
-        
-    }
 
     /**
      * @param args the command line arguments
@@ -27,13 +24,18 @@ public class Main
         Main main; 
         try
         {
-            main = new Main(args[0]);
-            out.println("Attempting to open " + args[0]);
+            main = new Main();
+            KeywordContext kwic = new KeywordContext(args[0]);
+            out.println(kwic.parseInputFile());
         }
         catch(ArrayIndexOutOfBoundsException e)
         {
             err.println("You must provide a filename!");
             System.exit(-1);
+        }
+        catch(FileNotFoundException fnfe)
+        {
+            err.println("Cannot find the input file!");
         }
     }
 
