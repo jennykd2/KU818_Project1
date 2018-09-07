@@ -6,6 +6,8 @@
 
 package kwic;
 
+import static java.lang.System.*;
+
 /**
  *
  * @author ssakl
@@ -22,7 +24,17 @@ public class Main
      */
     public static void main(String[] args) 
     {
-        Main main = new Main(args[0]);
+        Main main; 
+        try
+        {
+            main = new Main(args[0]);
+            out.println("Attempting to open " + args[0]);
+        }
+        catch(ArrayIndexOutOfBoundsException e)
+        {
+            err.println("You must provide a filename!");
+            System.exit(-1);
+        }
     }
 
 }

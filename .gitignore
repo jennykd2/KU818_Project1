@@ -42,3 +42,5 @@ ObjectOriented/KWICOOD/nbproject/genfiles.properties
 ObjectOriented/KWICOOD/nbproject/build-impl.xml
 ObjectOriented/KWICOOD/manifest.mf
 ObjectOriented/KWICOOD/build.xml
+/ObjectOriented/KWICOOD/build/
+/ObjectOriented/KWICOOD/dist/
