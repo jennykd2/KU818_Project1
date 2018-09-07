@@ -34,8 +34,7 @@ public class KeywordContext implements IKeywordContext
     {
         BufferedReader bufReader = new BufferedReader(new FileReader(this.filename));
         StringBuilder builder = new StringBuilder();
-        String currentLine = "";
-        
+        String currentLine;       
     
         for(;;)
         {
@@ -52,6 +51,5 @@ public class KeywordContext implements IKeywordContext
             }
         }
         return builder.toString();
-    }
-        
+    }        
 }
