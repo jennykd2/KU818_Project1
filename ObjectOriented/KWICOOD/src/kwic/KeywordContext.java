@@ -4,9 +4,9 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import static java.lang.System.out;
 /**
  *
  * @author Stan Sakl
@@ -14,6 +14,10 @@ import static java.lang.System.out;
 public class KeywordContext implements IKeywordContext
 {
     private String filename;
+    
+    private Shifter shifter = new Shifter();
+    
+    
     
     private KeywordContext() 
     {
@@ -30,10 +34,11 @@ public class KeywordContext implements IKeywordContext
      * @return
      * @throws FileNotFoundException
      */
-    public String parseInputFile() throws FileNotFoundException
+    @Override
+    public ArrayList<String> parseInputFile() throws FileNotFoundException
     {
-        BufferedReader bufReader = new BufferedReader(new FileReader(this.filename));
-        StringBuilder builder = new StringBuilder();
+        BufferedReader bufReader = new BufferedReader(new FileReader(this.getFilename()));
+        ArrayList<String> lineList = new ArrayList<>();
         String currentLine;       
     
         for(;;)
@@ -42,14 +47,40 @@ public class KeywordContext implements IKeywordContext
             {     
                 currentLine = bufReader.readLine();
                 if(currentLine == null) {break;}
-
-                builder.append(currentLine).append(System.lineSeparator());
+                
+                lineList.add(currentLine);
             }
             catch (IOException ex)
             {
                 Logger.getLogger(KeywordContext.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        return builder.toString();
-    }        
+        return lineList;
+    }     
+    
+    /**
+     * @return the filename
+     */
+    public String getFilename()
+    {
+        return filename;
+    }
+
+    /**
+     * @param filename the filename to set
+     */
+    public void setFilename(String filename)
+    {
+        this.filename = filename;
+    }
+    
+    public Shifter getShifter()
+    {
+        return this.shifter;
+    }
+    
+    public void setShifter(Shifter shifter)
+    {
+        this.shifter = shifter;
+    }
 }
