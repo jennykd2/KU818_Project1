@@ -11,23 +11,7 @@ import java.util.ArrayList;
 public class Main 
 {
     private ArrayList<String> lineList = new ArrayList<>();
-    /**
-     * @return the lineList
-     */
-    public ArrayList<String> getLineList()
-    {
-        return lineList;
-    }
-
-    /**
-     * @param lineList the lineList to set
-     */
-    public void setLineList(ArrayList<String> lineList)
-    {
-        this.lineList = lineList;
-    }
-    
-    
+   
     public Main()
     {
     }
@@ -63,4 +47,22 @@ public class Main
             err.println("Cannot find the input file!");
         }
     }
+    
+     /**
+     * @return the lineList
+     */
+    public ArrayList<String> getLineList()
+    {
+        return lineList;
+    }
+
+    /**
+     * @param lineList the lineList to set
+     */
+    public void setLineList(ArrayList<String> lineList)
+    {
+        this.lineList = lineList;
+    }
+    
+    
 }
