@@ -7,7 +7,7 @@ import java.util.ArrayList;
  *
  * @author Stan Sakl
  */
-public interface IKeywordContext
+public interface IFileParser
 {
     public ArrayList<String> parseInputFile() throws FileNotFoundException;
 }

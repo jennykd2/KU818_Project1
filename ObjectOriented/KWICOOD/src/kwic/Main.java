@@ -31,7 +31,7 @@ public class Main
         try
         {
             main = new Main();
-            KeywordContext kwic = new KeywordContext(args[0]);
+            FileParser kwic = new FileParser(args[0]);
             localLineList = kwic.parseInputFile();
             out.println(localLineList);
             main.setLineList(localLineList);
@@ -62,7 +62,6 @@ public class Main
     public void setLineList(ArrayList<String> lineList)
     {
         this.lineList = lineList;
-    }
-    
+    }   
     
 }

@@ -6,5 +6,8 @@ package kwic;
  */
 public class Shifter 
 {
-
+    public Shifter()
+    {
+        
+    }
 }

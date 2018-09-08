@@ -11,7 +11,7 @@ import java.util.logging.Logger;
  *
  * @author Stan Sakl
  */
-public class KeywordContext implements IKeywordContext
+public class FileParser implements IFileParser
 {
     private String filename;
     
@@ -19,12 +19,12 @@ public class KeywordContext implements IKeywordContext
     
     
     
-    private KeywordContext() 
+    private FileParser() 
     {
         //Do nothing
     }
     
-    public KeywordContext(String filename) 
+    public FileParser(String filename) 
     {
         this.filename = filename;
     }
@@ -52,7 +52,7 @@ public class KeywordContext implements IKeywordContext
             }
             catch (IOException ex)
             {
-                Logger.getLogger(KeywordContext.class.getName()).log(Level.SEVERE, null, ex);
+                Logger.getLogger(FileParser.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
         return lineList;
