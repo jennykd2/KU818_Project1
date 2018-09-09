@@ -45,3 +45,5 @@ ObjectOriented/KWICOOD/build.xml
 /ObjectOriented/KWICOOD/build/
 /ObjectOriented/KWICOOD/dist/
 /Functional/KWICFunctional/dist/
+/PipeAndFilter/ParseKeywordFile/nbproject/private/
+PipeAndFilter/ParseKeywordFile/nbproject/build-impl.xml
