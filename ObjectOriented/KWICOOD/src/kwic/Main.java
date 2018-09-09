@@ -11,10 +11,7 @@ import java.util.ArrayList;
 public class Main 
 {
   
-   
-    public Main()
-    {
-    }
+
     /**
      * @param args the command line arguments
      */
@@ -25,10 +22,10 @@ public class Main
         try
         {
             main = new Main();
-            FileParser kwic = new FileParser(args[0]);
+            IFileParser kwic = new FileParser(args[0]);
             localLineList = kwic.parseInputFile();
             out.println(localLineList);
-            Shifter s = new Shifter();
+            IShifter s = new Shifter();
             s.generateWordListsFromLineList(localLineList);
             
         }
