@@ -21,3 +21,19 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/Functional/KWICFunctional/nbproject/private/
+/Functional/KWICFunctional/build/
+Functional/KWICFunctional/nbproject/build-impl.xml
+Functional/KWICFunctional/nbproject/genfiles.properties
+/Functional/KWICOOD/nbproject/private/
+/Functional/KWICOOD/build/
+Functional/KWICOOD/nbproject/build-impl.xml
+Functional/KWICOOD/manifest.mf
+/ObjectOriented/KWICOOD/nbproject/private/
+ObjectOriented/KWICOOD/nbproject/build-impl.xml
+ObjectOriented/KWICOOD/manifest.mf
+/ObjectOriented/KWICOOD/build/
+/ObjectOriented/KWICOOD/dist/
+/Functional/KWICFunctional/dist/
+/PipeAndFilter/ParseKeywordFile/nbproject/private/
+PipeAndFilter/ParseKeywordFile/nbproject/build-impl.xml
