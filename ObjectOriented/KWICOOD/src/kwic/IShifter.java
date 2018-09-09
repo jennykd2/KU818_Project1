@@ -14,7 +14,11 @@ import java.util.ArrayList;
 public interface IShifter
 {
 
-    void generateWordListFromLineList(ArrayList<String> lineList);
+    /**
+     *
+     * @param lineList
+     */
+    void generateWordListsFromLineList(ArrayList<String> lineList);
 
     ArrayList<String> getWordList();
     

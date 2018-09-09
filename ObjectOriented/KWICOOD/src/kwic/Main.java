@@ -35,6 +35,8 @@ public class Main
             localLineList = kwic.parseInputFile();
             out.println(localLineList);
             main.setLineList(localLineList);
+            Shifter s = new Shifter();
+            s.generateWordListsFromLineList(localLineList);
             
         }
         catch(ArrayIndexOutOfBoundsException e)
