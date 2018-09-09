@@ -22,12 +22,6 @@ public class Shifter implements IShifter
     }
 
     @Override
-    public ArrayList<String> getWordList()
-    {
-        return wordList;
-    }
-
-    @Override
     public void generateWordListsFromLineList(ArrayList<String> lineList)
     {
         String line = "";
@@ -43,7 +37,8 @@ public class Shifter implements IShifter
             {
                 this.wordList.add(tokenizer.nextToken());
                 
-            }         
+            }      
+            
             this.wordList.sort(null);
             out.println(this.wordList.toString());
             this.getMasterWordList().add(this.wordList);

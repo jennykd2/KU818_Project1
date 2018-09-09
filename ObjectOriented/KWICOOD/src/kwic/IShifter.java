@@ -20,6 +20,5 @@ public interface IShifter
      */
     void generateWordListsFromLineList(ArrayList<String> lineList);
 
-    ArrayList<String> getWordList();
     
 }

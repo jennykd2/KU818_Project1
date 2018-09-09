@@ -66,21 +66,4 @@ public class FileParser implements IFileParser
         return filename;
     }
 
-    /**
-     * @param filename the filename to set
-     */
-    public void setFilename(String filename)
-    {
-        this.filename = filename;
-    }
-    
-    public Shifter getShifter()
-    {
-        return this.shifter;
-    }
-    
-    public void setShifter(Shifter shifter)
-    {
-        this.shifter = shifter;
-    }
 }
