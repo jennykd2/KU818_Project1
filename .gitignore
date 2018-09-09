@@ -37,3 +37,4 @@ ObjectOriented/KWICOOD/manifest.mf
 /Functional/KWICFunctional/dist/
 /PipeAndFilter/ParseKeywordFile/nbproject/private/
 PipeAndFilter/ParseKeywordFile/nbproject/build-impl.xml
+.DS_Store
