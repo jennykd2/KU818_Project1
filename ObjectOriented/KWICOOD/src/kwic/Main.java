@@ -19,6 +19,9 @@ public class Main
     {
         Main main; 
         ArrayList<String> localLineList = new ArrayList<>();
+        long startTime = System.currentTimeMillis();
+        long stopTime = 0L;
+        long totalTime = 0L;
         try
         {
             main = new Main();
@@ -37,6 +40,12 @@ public class Main
         catch(FileNotFoundException fnfe)
         {
             err.println("Cannot find the input file!");
+        }
+        finally
+        {
+            stopTime = System.currentTimeMillis();
+            totalTime = stopTime - startTime;
+            out.println("Program execution time (ms): " + totalTime);
         }
     }   
 }
